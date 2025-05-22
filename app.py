@@ -16,6 +16,9 @@ class SchichtplanerApp:
         self.root.title("Schichtplaner")
         self.root.geometry("1200x800")
         
+        # Configure ttk styles
+        self.configure_styles()
+        
         # Load environment variables
         load_dotenv()
         
@@ -65,6 +68,35 @@ class SchichtplanerApp:
         # Create menu bar with Excel import
         self.create_menu()
         
+    def configure_styles(self):
+        """Configure ttk styles for consistent theming"""
+        style = ttk.Style()
+        
+        # Configure Treeview
+        style.configure("Treeview",
+                       rowheight=25,
+                       fieldbackground="white")
+        style.configure("Treeview.Heading",
+                       font=('TkDefaultFont', 9, 'bold'))
+        
+        # Configure Buttons
+        style.configure("TButton",
+                       padding=5)
+        
+        # Configure Entry fields
+        style.configure("TEntry",
+                       padding=5)
+        
+        # Configure Combobox
+        style.configure("TCombobox",
+                       padding=5)
+        
+        # Configure Notebook (Tabs)
+        style.configure("TNotebook",
+                       tabmargins=[2, 5, 2, 0])
+        style.configure("TNotebook.Tab",
+                       padding=[10, 2])
+        
     def load_dropdown_data(self):
         """Load dropdown data from Supabase if connected"""
         if self.is_supabase_connected:
@@ -76,18 +108,18 @@ class SchichtplanerApp:
         
     def create_menu(self):
         """Create the application menu bar"""
-        menubar = tk.Menu(self.root)
+        menubar = tk.Menu(self.root, relief='flat', background='#f0f0f0', activebackground='#e0e0e0')
         self.root.config(menu=menubar)
         
         # File menu
-        file_menu = tk.Menu(menubar, tearoff=0)
+        file_menu = tk.Menu(menubar, tearoff=0, relief='flat', background='#f0f0f0', activebackground='#e0e0e0')
         menubar.add_cascade(label="Datei", menu=file_menu)
         file_menu.add_command(label="Excel-Datei laden", command=self.load_excel_file)
         file_menu.add_separator()
         file_menu.add_command(label="Beenden", command=self.root.quit)
         
         # Supabase menu
-        supabase_menu = tk.Menu(menubar, tearoff=0)
+        supabase_menu = tk.Menu(menubar, tearoff=0, relief='flat', background='#f0f0f0', activebackground='#e0e0e0')
         menubar.add_cascade(label="Datenbank", menu=supabase_menu)
         supabase_menu.add_command(label="Daten von Supabase aktualisieren", 
                                  command=self.refresh_data_from_supabase)

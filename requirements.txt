@@ -1,6 +1,7 @@
 # GUI requirements
 tkinter
 tkcalendar>=1.6.1
+ttkthemes>=3.2.2  # For Yaru theme
 
 # Data handling
 pandas>=2.0.0
