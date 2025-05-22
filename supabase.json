@@ -1,0 +1,306 @@
+[
+    {
+      "schema_info": [
+        {
+          "table_name": "abschnitte",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "updated_by_at",
+              "data_type": "character varying",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "abschnitt",
+              "data_type": "character varying",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "uploaded",
+              "data_type": "boolean",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "created_at",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "updated_at",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            }
+          ]
+        },
+        {
+          "table_name": "arbeitsleiter",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "name",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "telefonnummer",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "email",
+              "data_type": "text",
+              "is_nullable": "YES"
+            }
+          ]
+        },
+        {
+          "table_name": "baufuhrer",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "name",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "telefonnummer",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "email",
+              "data_type": "text",
+              "is_nullable": "YES"
+            }
+          ]
+        },
+        {
+          "table_name": "personal",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "name",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "funktion",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "telefonnummer",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "firma",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "email",
+              "data_type": "text",
+              "is_nullable": "YES"
+            }
+          ]
+        },
+        {
+          "table_name": "schichtplanung",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "updated_by_at",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "datum_von",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "datum_bis",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "schichtzeit",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "abschnitt",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "tatigkeit",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "baufuhrer",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "arbeitsleiter",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "baugruppe",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "ako",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "sc_1",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "siwa_1",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "siwa_2",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "logistikpersonal",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "maschinisten",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "personal_gbm",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "gleisbaumaschine",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "bagger",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "diverse_maschinen",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "subunternehmer",
+              "data_type": "ARRAY",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "kommentare",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "dateien",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "dateien_link",
+              "data_type": "text",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "uploaded",
+              "data_type": "boolean",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "titel",
+              "data_type": "text",
+              "is_nullable": "YES"
+            }
+          ]
+        },
+        {
+          "table_name": "schichtzeiten",
+          "columns": [
+            {
+              "column_name": "id",
+              "data_type": "uuid",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "updated_by_at",
+              "data_type": "character varying",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "schicht",
+              "data_type": "character varying",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "zeit_von",
+              "data_type": "time without time zone",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "zeit_bis",
+              "data_type": "time without time zone",
+              "is_nullable": "NO"
+            },
+            {
+              "column_name": "uploaded",
+              "data_type": "boolean",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "created_at",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            },
+            {
+              "column_name": "updated_at",
+              "data_type": "timestamp with time zone",
+              "is_nullable": "YES"
+            }
+          ]
+        }
+      ]
+    }
+  ]

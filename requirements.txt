@@ -1,0 +1,15 @@
+# GUI requirements
+tkinter
+tkcalendar>=1.6.1
+
+# Data handling
+pandas>=2.0.0
+numpy
+
+# Supabase
+supabase-py>=2.0.0
+python-dotenv>=1.0.0
+
+# Other utilities
+uuid
+openpyxl>=3.1.2  # for Excel operations 

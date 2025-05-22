@@ -1,30 +1,65 @@
-# Construction shift planner
+# Schichtplaner
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A shift planning application built with Python and Tkinter, integrated with Supabase for data storage.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/giboschettis-projects/v0-construction-shift-planner)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/m3V21NypQna)
+## Features
 
-## Overview
+- Create and manage work shifts
+- View existing shifts in a table format
+- Manage project data including:
+  - Sections (Abschnitte)
+  - Shift times (Schichtzeiten)
+  - Work managers (Arbeitsleiter)
+  - Construction managers (Bauführer)
+  - Staff (Mitarbeiter)
+  - Inventory (Inventar)
+- Excel file import support
+- Supabase database integration
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Requirements
 
-## Deployment
+- Python 3.x
+- tkinter
+- tkcalendar
+- python-dotenv
+- supabase-py
+- pandas (for Excel operations)
 
-Your project is live at:
+## Installation
 
-**[https://vercel.com/giboschettis-projects/v0-construction-shift-planner](https://vercel.com/giboschettis-projects/v0-construction-shift-planner)**
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd schichtplaner
+```
 
-## Build your app
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
 
-Continue building your app on:
+3. Create a `.env` file in the project root and add your Supabase credentials:
+```
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+```
 
-**[https://v0.dev/chat/projects/m3V21NypQna](https://v0.dev/chat/projects/m3V21NypQna)**
+4. Run the application:
+```bash
+python main.py
+```
 
-## How It Works
+## Project Structure
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- `main.py` - Application entry point
+- `app.py` - Main application class
+- `connectors/` - Database and Excel connectors
+- `ui/` - User interface components
+  - `new_shifts_tab.py` - New shifts creation interface
+  - `view_shifts_tab.py` - Shifts viewing interface
+  - `project_data_tab.py` - Project data management interface
+  - `project_sections/` - Individual section components
+
+## License
+
+[Your chosen license] 
